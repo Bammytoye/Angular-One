@@ -1,0 +1,48 @@
+<p>{{ "Agriculture" | uppercase }}</p>
+<p>{{ "HOME" | lowercase }}</p>
+<p>Date</p>
+<div>{{ date | date }}</div>
+<p>Short Time</p>
+<div>{{ date | date : "short" }}</div>
+<p>Long Time</p>
+<div>{{ date | date : "long" }}</div>
+<p>Long Time</p>
+<div>{{ date | date : "full" }}</div>
+<p>Short Time Diff</p>
+<div>{{ date | date : "shortTime" }}</div>
+<p>Long Time Diff</p>
+<div>{{ date | date : "longTime" }}</div>
+<p>Full Time Diff</p>
+<div>{{ date | date : "fullTime" }}</div>
+
+<p>Full Date</p>
+<div>{{ date | date : "fullDate" }}</div>
+<p>Short Date</p>
+<div>{{ date | date : "shortDate" }}</div>
+<br /><br />
+
+<p>Long Date</p>
+<div>{{ date | date : "longDate" }}</div>
+<br /><br />
+
+<p>Currency</p>
+<div>{{ 10000 | currency : "EUR" }}</div>
+<div>{{ 10000 | currency : "NGN" : "symbol-narrow" }}</div>
+<div>{{ 10000 | currency : "NGN" }}</div>
+<div>{{ 10000 | currency : "NGN" : "code" }}</div>
+<div>{{ 10000 | currency }}</div>
+<br /><br />
+
+<p>SLICE NATION</p>
+<p>{{ "Investment" | slice : 2 : 5 }}</p>
+<br /><br />
+
+<p>{{ "Information " | slice : 2 }}</p>
+<p>{{ "Information " | slice : 2 : 8 }}</p>
+<p>{{ "Information " | slice : 8 : 10 }}</p>
+<p>{{ "Information " | slice : 0 : 4 }}</p>
+<p>{{ "Information " | slice : 3 : 5 }}</p>
+<p>{{ "Information " | slice : 5 : 7 }}</p>
+<p>{{ "Information " | slice : 5 : 8 }}</p>
+<p>{{ "Information " | slice : 2 : 5 }}</p>
+<p>{{ "Information " | slice : 2 : 6 }}</p>

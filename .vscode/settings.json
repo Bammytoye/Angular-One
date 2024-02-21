@@ -1,0 +1,12 @@
+{
+  "editor.inlineSuggest.showToolbar": "always",
+  "cSpell.words": ["retrive", "returnitem", "Servicecomponent", "Templayeform"],
+  "cSpell.customDictionaries": {
+    "custom-dictionary-workspace": {
+      "name": "custom-dictionary-workspace",
+      "path": "${workspaceFolder:AngularClass}/.cspell/custom-dictionary-workspace.txt",
+      "addWords": true,
+      "scope": "workspace"
+    }
+  }
+}

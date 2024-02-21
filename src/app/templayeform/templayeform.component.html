@@ -1,0 +1,41 @@
+
+<div class="border border-black mt-7 mx-auto w-[52%]">
+    <div class="flex justify-center mx-auto">
+        <div class="flex flex-row mt-10">
+            <h1 class="text-center text-2xl font-semibold uppercase mb-5">
+                Template Driven Form
+            </h1>
+            
+            <form #fgroup="ngForm" class="flex flex-col gap-4 w-full">
+                <input type="text" placeholder="First Name" [(ngModel)]="firstname" class="outline-none focus:outline-blue-500 p-3 border border-gray-600 rounded-lg" name="firstname" #fname="ngModel" required [class.is-valid]='fname.valid && fname.dirty' [class.is-invalid]='fname.invalid && fname.touched' minlength="5">
+                <!-- {{fname.valid}} -->
+                <div *ngIf="fname.invalid && fname.touched">
+                    <span class="text-sm text-center text-red-600" *ngIf="fname?.errors?.['required']">This Field is Required</span>
+                    <span class="text-sm text-center text-red-600" *ngIf="fname?.errors?.['minlength']">The minimum length required is Five</span>
+                </div>
+                <!-- <div>{{fname.untouched}}</div>
+                <div>{{fname.pristine}}</div>
+                <div>{{fname.touched}}</div>
+                <div>{{fname.dirty}}</div> -->
+
+                <input type="text" placeholder="City" [(ngModel)]="city" class="outline-none focus:outline-blue-500 p-3 border border-gray-600 rounded-lg" name="cityvalidate" #cityvalidate="ngModel" required [class.is-valid]='cityvalidate.valid && cityvalidate.dirty' [class.is-invalid]='cityvalidate.invalid && cityvalidate.touched' minlength="5">
+                <!-- {{cityvalidate.valid}} -->
+                <div *ngIf="cityvalidate.invalid && cityvalidate.touched">
+                    <span class="text-sm text-center text-red-600" *ngIf="cityvalidate?.errors?.['required']">This Field is Required</span>
+                    <span class="text-sm text-center text-red-600" *ngIf="cityvalidate?.errors?.['minlength']">The minimum length required is Five</span>
+                </div>
+                
+                <div class="flex gap-3">
+                    <input placeholder="checkbox" type="checkbox" name="cbox"[(ngModel)]="checkbox" #cbox="ngModel" required [class.is-valid]='cbox.valid && cbox.dirty' [class.is-invalid]='cbox.invalid && cbox.touched'> Click Me
+                </div>
+                
+                <div *ngIf="cbox.invalid && cbox.touched">
+                    <span class="text-sm text-center text-red-600" *ngIf="cbox?.errors?.['required']">This Field is Required</span>
+                </div>
+                <button 
+                class="mb-4 flex justify-center items-center px-5 py-4 border border-gray-800 bg-black text-white rounded-2xl"
+                type="submit" (click)="submit()" [disabled]="fgroup.invalid">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+
+<!-- <div>
+    {{this.name}} <br>
+    {{this.age}} <br>
+    {{this.special}} <br>
+    {{this.specialOne}} <br>
+    {{this.obj.email}} <br>
+    {{this.ObjectOne.lastname}} <br>
+    {{this.arrayFour[0]}} <br>
+    {{this.arrayFive[0].lastName}} <br>
+    
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum dicta voluptatem a ducimus perferendis debitis corporis nulla quas rem officia quam, quae quo nobis sunt iste voluptatum commodi! Consectetur, maiores architecto, nihil laboriosam ad eligendi quod in quasi similique accusamus rem, porro debitis quia exercitationem voluptatibus voluptas maxime mollitia reiciendis expedita at animi dolores possimus nulla. Quae officiis quis vero, repudiandae omnis maxime et cupiditate fugit, voluptatibus consectetur ab. Necessitatibus explicabo voluptatum, sit quae non voluptatibus modi iste, unde nihil eveniet sint? Dolorem provident, ab animi minus voluptatem quis labore impedit libero, porro et autem, aliquam consequuntur facere nihil est placeat. Aperiam, quas! Ipsum culpa consequuntur itaque facere officiis veritatis illo corrupti laborum porro fugiat! Illum dolores vero velit porro? Quia amet ut eum quo vel provident possimus natus, laborum fugiat consequuntur, soluta voluptatibus illo quam dignissimos ratione magni animi, cum facilis reiciendis nam fugit officia. Ut optio sequi commodi deleniti atque porro necessitatibus ipsa eveniet, ex alias quaerat molestias tempora nihil odio hic dolorum veniam aspernatur vel et culpa consequatur expedita? Exercitationem atque eius numquam unde et quam delectus. Nemo veniam vel quae reiciendis aut incidunt impedit soluta quos necessitatibus ducimus ab, ad optio dolores quis earum possimus. Ex!.
+    </p>
+</div>
+
+<div *ngFor="let obj of arrayFive, let i= index">
+    <button (click) = "checkindex(i)"> Check Me </button>
+    <p>{{obj.firstName}}</p>
+    <p>{{obj.lastName}}</p>
+</div>
+
+<div [class]="secstyling">
+    How are you doing, man?
+</div>
+
+    
+        <input type="text" class="{{firststyling}}" placeholder="firstname"> <br>
+        <input type="text" class="{{firststyling}}" placeholder="lastname">
+    
+
+    <div [style.color]="special?'red':'blue'" [style.background-color]="special?'black':'white'" [style.display]="special?'block':'none'">
+        hello, everyone
+    </div>
+    <div>
+        <button (click)="check()">
+            Check
+        </button>
+    </div> -->
+
+<div class="flex mt-8 justify-center">
+    <div class="flex flex-col p-10 gap-y-2 border border-gray-800 rounded-md w-1/2">
+        <p class="text-2xl flex items-center justify-center">Zeke Sign Up Page!</p>
+        <input class="p-3 border border-gray-600 rounded-lg outline-none focus:outline-blue-500" type="text" [(ngModel)]="firstname" placeholder="First Name"> 
+        <input class="p-3 border border-gray-600 rounded-lg outline-none focus:outline-blue-500" type="text" [(ngModel)]="lastname" placeholder="Last Name"> 
+        <input class="p-3 border border-gray-600 rounded-lg outline-none focus:outline-blue-500" type="email" [(ngModel)]="email" placeholder="Email"> 
+        <input class="p-3 border border-gray-600 rounded-lg outline-none focus:outline-blue-500" type="number" [(ngModel)]="age" placeholder="Age"> 
+        <input class="p-3 border border-gray-600 rounded-lg outline-none focus:outline-blue-500" type="text" [(ngModel)]="address" placeholder="Address"> 
+        <input class="p-3 border border-gray-600 rounded-lg outline-none focus:outline-blue-500" type="password" [(ngModel)]="password" placeholder="Password"> 
+        
+        <!-- button -->
+        <button class="flex justify-center items-center px-5 py-4 border border-gray-800 bg-black text-white rounded-2xl" 
+        (click)="signup()"
+        >
+            Sign Up
+        </button>
+
+        <div class="text-red-500 text-center">{{message}}</div>
+    </div>
+</div>
+

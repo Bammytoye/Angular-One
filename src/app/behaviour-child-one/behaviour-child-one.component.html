@@ -1,0 +1,11 @@
+
+<div class="gap-5">
+  <div class="flex flex-column items-center justify-center shadow-md border mb-10" *ngFor="let list of array" (click)="sendList(list)">
+    <div class="p-10">
+      <p class="text-green-500">{{list.firstname}}</p>
+      <!-- <p class="text-blue-500">{{list.lastname}}</p>
+      <p class="text-yellow-500">{{list.age}}</p>
+      <p class="text-orange-500">{{list.email}}</p> -->
+    </div>
+  </div>
+</div>

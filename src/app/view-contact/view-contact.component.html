@@ -1,0 +1,37 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Launch static backdrop modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="col-8 mx-auto align-items-center">
+                    <input type="text" class="form-control" [(ngModel)]="editfirst_name" placeholder="first_name">
+                    <input type="text" class="form-control mt-2 my-2 col-3" [(ngModel)]="editlastname"
+                        placeholder="lastname">
+                    <input type="text" class="form-control mt-2 my-2 col-3" [(ngModel)]="editemail" placeholder="email">
+                    <input type="text" class="form-control mt-2 my-2 col-3" [(ngModel)]="editphone_number"
+                        placeholder="phone_number">
+                    <input type="text" class="form-control mt-2 my-2 col-3" [(ngModel)]="editaddress"
+                        placeholder="address">
+                    <input type="text" class="form-control mt-2 my-2 col-3" [(ngModel)]="editgender"
+                        placeholder="gender">
+                    <div class="d-flex  align-items-center">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success" (click)="saveChanges()">Understood</button>
+            </div>
+        </div>
+    </div>
+</div>

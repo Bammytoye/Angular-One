@@ -1,0 +1,15 @@
+
+<div class="flex flex-col justify-center items-center pt-32">
+  <p class="text-2xl font-bold">event-child works!</p>
+
+      <div class="flex flex-col space-y-2 justify-center items-center border border-black p-10 rounded-md">
+        <div>
+          <p class="px-4 py-1 border-b-2 border-blue-400">Sender: {{receiveText}}</p>
+        </div>
+
+        <div class="flex flex-col space-y-3">
+            <input  type="text" [(ngModel)]="sendRes" placeholder="Send to Parent" class="border px-4 py-1 outline-none rounded-md">
+            <button class="px-4 py-1 border bg-green-600 rounded-md" (click)="send()">Send</button>
+        </div>
+      </div>
+</div>

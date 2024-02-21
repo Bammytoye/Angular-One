@@ -1,0 +1,20 @@
+<div class="flex justify-center mt-24">
+    <div class="flex flex-col p-10 gap-y-2 shadow-xl border-t-2 w-1/2">
+        <h4 class="text-2xl flex items-center justify-center">
+            Sign In
+        </h4>
+        <label for="email">Email:</label>
+        <input class="p-3 shadow-md rounded-lg mb-4 outline-none focus:outline-blue-500" name="email" type="text" placeholder="Email" [(ngModel)]="email">
+        
+        <label for="password">Password:</label>
+        <input class="p-3 shadow-md rounded-lg outline-none focus:outline-blue-500" name="password" type="text" placeholder="Password" [(ngModel)]="password">
+        
+        <p class="text-center font-bold text-sm text-red-600">{{this.message}}</p>
+        
+        <button 
+            class="flex justify-center items-center px-5 py-4 border border-gray-800 bg-black text-white rounded-2xl"    
+            (click)="signin()">
+            Sign In
+        </button>
+    </div>
+</div>
